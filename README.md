@@ -1,24 +1,10 @@
-# links-app-vue2
+# Links App - Vue Version
 
-## Project setup
-```
-npm install
-```
+A simple application for saving and organizing links built with Vue.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Features
+- View and filter links by tags
+- See link details with comments and votes
+- Add new links with tags
+- Add comments to links
+- Vote on links

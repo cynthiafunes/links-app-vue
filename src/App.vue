@@ -1,28 +1,110 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <header class="header">
+      <h1>Links App</h1>
+      <nav>
+        <router-link to="/" class="nav-button">Inicio</router-link>
+        <router-link to="/add" class="nav-button">Añadir Link</router-link>
+      </nav>
+    </header>
+    
+    <main class="container">
+      <router-view />
+    </main>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  name: 'App'
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-button {
+  background-color: #4285f4;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.link-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #eee;
+  padding: 3px 8px;
+  border-radius: 12px;
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.comment {
+  border-top: 1px solid #eee;
+  padding: 10px 0;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input, 
+textarea, 
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+button {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.error {
+  color: red;
+  background-color: #ffeeee;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
 }
 </style>
